@@ -8,11 +8,7 @@ namespace LemonAidStand
 {
     class Player
     {
-        // member variables
 
-        // constructor
-
-        // methods
 
     }
 }

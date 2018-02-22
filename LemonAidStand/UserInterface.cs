@@ -8,5 +8,11 @@ namespace LemonAidStand
 {
     class UserInterface
     {
+
+       // Member variable
+
+        // Construtor
+
+        // Methods
     }
 }

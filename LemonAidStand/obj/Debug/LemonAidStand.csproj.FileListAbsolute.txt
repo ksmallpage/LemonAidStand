@@ -1,1 +1,6 @@
 C:\Users\Baron\Desktop\C#Projects\LemonAidStand\LemonAidStand\bin\Debug\LemonAidStand.exe.config
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\LemonAidStand\bin\Debug\LemonAidStand.exe
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\LemonAidStand\bin\Debug\LemonAidStand.pdb
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\LemonAidStand\obj\Debug\LemonAidStand.csprojResolveAssemblyReference.cache
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\LemonAidStand\obj\Debug\LemonAidStand.exe
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\LemonAidStand\obj\Debug\LemonAidStand.pdb

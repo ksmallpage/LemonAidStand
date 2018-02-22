@@ -13,6 +13,12 @@ namespace LemonAidStand
         // constructor
 
         // methods
+                // Overcast
+                // Cloudy
+                // Rainy
+                // sunny
+                // hot 
+                // muggy
 
     }
 }

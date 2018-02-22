@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace LemonAidStand
 {
-    class Program
+    class recipe
     {
-        static void Main(string[] args)
-        {
-            Game game = new Game();
-            game.RunGame();
-        }
+        // member variables
+
+        // Construstor
+
+            // create a default recipe
+
+        // Methods 
+
     }
 }
