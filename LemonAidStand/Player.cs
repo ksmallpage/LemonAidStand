@@ -8,7 +8,22 @@ namespace LemonAidStand
 {
     class Player
     {
+        // member variables ( HAS A )
+        Inventory inventory = new Inventory();
+        Money money = new Money();
+        Score score = new Score();
+        ShoppingList shoppinglist = new ShoppingList();
+        Stand stand = new Stand();
 
+        // TodaysWeather
+
+        // Contstructor ( SPAWNER )
+        public Player()
+        {
+            
+        }
+
+        // Methods ( CAN DO )
 
     }
 }

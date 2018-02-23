@@ -8,5 +8,14 @@ namespace LemonAidStand
 {
     class Checkout
     {
+        // member variables
+
+        // constructor
+        private Checkout()
+        {
+
+        }
+
+        // methods
     }
 }

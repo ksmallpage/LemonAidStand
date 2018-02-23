@@ -8,5 +8,12 @@ namespace LemonAidStand
 {
     class Score
     {
+        // member variables ( HAS A )
+
+        // TodaysWeather
+
+        // Contstructor ( SPAWNER )
+
+        // Methods ( CAN DO )
     }
 }

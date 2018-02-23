@@ -8,5 +8,16 @@ namespace LemonAidStand
 {
     class Pitcher
     {
+        // member variables ( HAS A )
+
+        // TodaysWeather
+
+        // Contstructor ( SPAWNER )
+        public Pitcher()
+        {
+
+        }
+
+        // Methods ( CAN DO )
     }
 }

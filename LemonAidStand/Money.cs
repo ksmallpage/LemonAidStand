@@ -8,5 +8,16 @@ namespace LemonAidStand
 {
     class Money
     {
+        // member variables ( HAS A )
+
+        // TodaysWeather
+
+        // Contstructor ( SPAWNER )
+        public Money()
+        {
+
+        }
+
+        // Methods ( CAN DO )
     }
 }

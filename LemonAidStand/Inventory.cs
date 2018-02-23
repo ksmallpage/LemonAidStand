@@ -8,11 +8,17 @@ namespace LemonAidStand
 {
     class Inventory
     {
-        // member variables
+        // member variables ( HAS A )
 
-        // constructor
+        // TodaysWeather
 
-        // methods
+        // Contstructor ( SPAWNER )
+        public Inventory()
+        {
+
+        }
+
+        // Methods ( CAN DO )
 
     }
 }

@@ -8,5 +8,16 @@ namespace LemonAidStand
 {
     class Goods
     {
+        // member variables ( HAS A )
+
+        // TodaysWeather
+
+        // Contstructor ( SPAWNER )
+        private Goods()
+        {
+
+        }
+
+        // Methods ( CAN DO )
     }
 }

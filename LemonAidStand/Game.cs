@@ -8,25 +8,39 @@ namespace LemonAidStand
 {
     class Game
     {
-        // member variables
+        // member variables ( HAS A )
 
-        // constructor
+        UI ui = new UI();
+        Player player = new Player();
+        Day day = new Day();
+        Store store = new Store();
 
-        // methods
+        
 
-       private void Instructions()
+
+
+        // Contstructor ( SPAWNER )
+        public Game()
         {
-           Console.WriteLine (" You have decided to open a lemonade stand to make some Money. You have complete control over your business.");
-           Console.WriteLine (" There is a default lemonade recipe, depeding on the weather you can vary the recipe to try and sell more Lemonade." );
-           Console.WriteLine (" You need to Buy enough ingredients to met customer demand. Demand will depend on the Weather");
-           Console.WriteLine (" You can set the price during the day to see if this influences the number of cups sold.");
-           Console.WriteLine (" The game will keep track of how much Money you have at the end - you start with $20 at the start.");
-           Console.WriteLine(" TRY NOT TO LOOSE MONEY");
+
         }
+
+        // Methods ( CAN DO )
+
+
 
        public void RunGame()
         {
-            Instructions();
+
+            // set up the game
+                // substances a player --> player substances the inventory
+                //substances 
+
+            ui.Instructions();
+            ui.DisplayPlayerInventory();
+
+            // Player to buy Inventory from store
+
 
             // set up the initial game
                 // double Money $10

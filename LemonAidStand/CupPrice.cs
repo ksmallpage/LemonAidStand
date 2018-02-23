@@ -8,5 +8,14 @@ namespace LemonAidStand
 {
     class CupPrice
     {
+        // member variables
+
+        // constructor
+        public CupPrice()
+        {
+
+        }
+
+        // methods
     }
 }

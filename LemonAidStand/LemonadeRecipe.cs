@@ -8,5 +8,16 @@ namespace LemonAidStand
 {
     class LemonadeRecipe
     {
+        // member variables ( HAS A )
+
+        // TodaysWeather
+
+        // Contstructor ( SPAWNER )
+        private LemonadeRecipe()
+        {
+
+        }
+
+        // Methods ( CAN DO )
     }
 }

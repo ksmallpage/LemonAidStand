@@ -9,10 +9,16 @@ namespace LemonAidStand
     class Day
     {
         // member variables ( HAS A )
+        Weather weather = new Weather();
+        Customer customer = new Customer();
 
         // TodaysWeather
 
         // Contstructor ( SPAWNER )
+        public Day()
+        {
+
+        }
 
         // Methods ( CAN DO )
     }

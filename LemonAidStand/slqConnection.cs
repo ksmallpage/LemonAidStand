@@ -8,5 +8,12 @@ namespace LemonAidStand
 {
     class slqConnection
     {
+        // member variables ( HAS A )
+
+        // TodaysWeather
+
+        // Contstructor ( SPAWNER )
+
+        // Methods ( CAN DO )
     }
 }

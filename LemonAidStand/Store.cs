@@ -8,11 +8,13 @@ namespace LemonAidStand
 {
     class Store
     {
-        // member variables
+        // member variables ( HAS A )
 
-        // constructor
+        // TodaysWeather
 
-        // methods
+        // Contstructor ( SPAWNER )
+
+        // Methods ( CAN DO )
 
     }
 }

@@ -9,16 +9,21 @@ namespace LemonAidStand
     class Weather
     {
         // member variables
+            // Overcast
+            // Cloudy
+            // Rainy
+            // sunny
+            // hot 
+            // muggy
 
         // constructor
+        public Weather()
+        {
+
+        }
 
         // methods
-                // Overcast
-                // Cloudy
-                // Rainy
-                // sunny
-                // hot 
-                // muggy
+
 
     }
 }

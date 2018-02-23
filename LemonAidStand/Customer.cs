@@ -11,6 +11,10 @@ namespace LemonAidStand
         // member variables
 
         // constructor
+        public Customer()
+        {
+
+        }
 
         // methods
 

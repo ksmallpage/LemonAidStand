@@ -6,15 +6,42 @@ using System.Threading.Tasks;
 
 namespace LemonAidStand
 {
-    class recipe
+    class Recipe
     {
-        // member variables
+        // member variables ( HAS A )
 
-        // Construstor
+       private Recipe recipe = new Recipe();
+       public Pitcher pitcher = new Pitcher();
+       public CupPrice cupprice = new CupPrice();
 
-            // create a default recipe
 
-        // Methods 
+        // Contstructor ( SPAWNER )
+        public Recipe()
+        {
+
+        }
+
+        // Methods ( CAN DO )
+
+        public void CreateRecipe()
+        {
+           //  Create a Recipe 
+        }
+
+        public void StoreRecipe()
+        {
+            // Store the Recipe
+        }
+
+        public void UpdateRecipe()
+        {
+            // update the recipe
+        }
+
+        public void DisplayRecipe()
+        {
+
+        }
 
     }
 }
