@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonAidStand
 {
-    class UserInterface
+    class LemonadeRecipe
     {
-
-       // Member variable
-
-        // Construtor
-
-        // Methods
     }
 }
