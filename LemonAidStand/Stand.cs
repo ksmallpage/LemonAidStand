@@ -17,6 +17,10 @@ namespace LemonAidStand
 
 
         // Contstructor ( SPAWNER )
+        public Stand()
+        {
+
+        }
 
         // Methods ( CAN DO )
     }

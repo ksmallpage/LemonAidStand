@@ -9,15 +9,18 @@ namespace LemonAidStand
     class Goods
     {
         // member variables ( HAS A )
+        Price price = new Price();
 
         // TodaysWeather
 
         // Contstructor ( SPAWNER )
-        private Goods()
+        public Goods()
         {
 
         }
 
         // Methods ( CAN DO )
+
+
     }
 }

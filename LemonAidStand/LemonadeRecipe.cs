@@ -13,7 +13,7 @@ namespace LemonAidStand
         // TodaysWeather
 
         // Contstructor ( SPAWNER )
-        private LemonadeRecipe()
+        public LemonadeRecipe()
         {
 
         }

@@ -14,6 +14,10 @@ namespace LemonAidStand
         // TodaysWeather
 
         // Contstructor ( SPAWNER )
+        public UI()
+        {
+
+        }
 
         // Methods ( CAN DO )
         public void DisplayPlayerInventory()
@@ -29,6 +33,10 @@ namespace LemonAidStand
             Console.WriteLine(" You can set the price during the day to see if this influences the number of cups sold.");
             Console.WriteLine(" The game will keep track of how much Money you have at the end - you start with $20 at the start.");
             Console.WriteLine(" TRY NOT TO LOOSE MONEY");
+        }
+        public void DisplayWeather(string weather, string forcastday)
+        {
+            Console.WriteLine($"{forcastday} Weather is { weather}");
         }
     }
 }

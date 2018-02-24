@@ -9,11 +9,10 @@ namespace LemonAidStand
     class Player
     {
         // member variables ( HAS A )
-        Inventory inventory = new Inventory();
-        Money money = new Money();
-        Score score = new Score();
-        ShoppingList shoppinglist = new ShoppingList();
-        Stand stand = new Stand();
+        public Inventory inventory = new Inventory();
+        public Wallet money = new Wallet();
+        public ShoppingList shoppinglist = new ShoppingList();
+        public Stand stand = new Stand();
 
         // TodaysWeather
 
@@ -24,6 +23,11 @@ namespace LemonAidStand
         }
 
         // Methods ( CAN DO )
+
+        public void DisplayTest()
+        {
+            
+        }
 
     }
 }

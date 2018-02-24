@@ -13,6 +13,10 @@ namespace LemonAidStand
         // TodaysWeather
 
         // Contstructor ( SPAWNER )
+        public ShoppingList()
+        {
+
+        }
 
         // Methods ( CAN DO )
     }

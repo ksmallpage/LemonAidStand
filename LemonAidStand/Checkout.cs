@@ -11,7 +11,7 @@ namespace LemonAidStand
         // member variables
 
         // constructor
-        private Checkout()
+        public Checkout()
         {
 
         }

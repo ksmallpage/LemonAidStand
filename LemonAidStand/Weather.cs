@@ -9,20 +9,24 @@ namespace LemonAidStand
     class Weather
     {
         // member variables
-            // Overcast
-            // Cloudy
-            // Rainy
-            // sunny
-            // hot 
-            // muggy
+
+        private List<string> weathertypes = new List<string>();
+
 
         // constructor
         public Weather()
         {
-
+           
+            weathertypes = new List<string>() { "Overcast", "Cloudy", "Rainy", "Sunny", "Hot", "Muggy" };
         }
 
         // methods
+
+        public string CreateWeather(int randomNumber)
+        {
+            Console.WriteLine(weathertypes[randomNumber]);
+            return weathertypes[randomNumber];
+        }
 
 
     }

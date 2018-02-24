@@ -6,14 +6,20 @@ using System.Threading.Tasks;
 
 namespace LemonAidStand
 {
-    class Score
+    class Wallet
     {
         // member variables ( HAS A )
 
         // TodaysWeather
 
         // Contstructor ( SPAWNER )
+        public Wallet()
+        {
+
+        }
 
         // Methods ( CAN DO )
+
+
     }
 }

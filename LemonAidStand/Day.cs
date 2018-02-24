@@ -9,8 +9,8 @@ namespace LemonAidStand
     class Day
     {
         // member variables ( HAS A )
-        Weather weather = new Weather();
-        Customer customer = new Customer();
+        public Weather weather = new Weather();
+        public Customer customer = new Customer();
 
         // TodaysWeather
 

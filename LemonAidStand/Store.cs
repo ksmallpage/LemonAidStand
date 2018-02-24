@@ -9,10 +9,16 @@ namespace LemonAidStand
     class Store
     {
         // member variables ( HAS A )
+        public Goods goods = new Goods();
+        public Checkout checkout = new Checkout();
 
         // TodaysWeather
 
         // Contstructor ( SPAWNER )
+        public Store()
+        {
+
+        }
 
         // Methods ( CAN DO )
 

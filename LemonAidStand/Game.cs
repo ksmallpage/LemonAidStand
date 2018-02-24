@@ -10,22 +10,31 @@ namespace LemonAidStand
     {
         // member variables ( HAS A )
 
-        UI ui = new UI();
-        Player player = new Player();
-        Day day = new Day();
-        Store store = new Store();
+        public UI ui = new UI();
+        public Player player = new Player();
+        public Day day = new Day();
+        public Store store = new Store();
+        private Random rnd = new Random();
+        public int randomNumber;
 
-        
+
 
 
 
         // Contstructor ( SPAWNER )
         public Game()
         {
-
+           // day.weather.CreateTodaysWeather(CreateRandomNumber(6));
         }
 
         // Methods ( CAN DO )
+
+            public int CreateRandomNumber(int argrandomnumber)
+        {
+            
+            randomNumber = rnd.Next(1, argrandomnumber);
+            return randomNumber;
+        }
 
 
 
@@ -36,18 +45,26 @@ namespace LemonAidStand
                 // substances a player --> player substances the inventory
                 //substances 
 
+
+            //set up the game
             ui.Instructions();
             ui.DisplayPlayerInventory();
+            string todaysWeather = day.weather.CreateWeather(CreateRandomNumber(6));
+            ui.DisplayWeather(todaysWeather, "Today");
+            string tomorrowsWeather = day.weather.CreateWeather(CreateRandomNumber(6));
+            ui.DisplayWeather(tomorrowsWeather, "Tomorrow");
+
+
 
             // Player to buy Inventory from store
 
 
             // set up the initial game
-                // double Money $10
-                // int ICE 0
-                // int Lemons 0
-                // int sugar 0
-                // int cups 0
+            // double Money $10
+            // int ICE 0
+            // int Lemons 0
+            // int sugar 0
+            // int cups 0
 
             // set up the price structure
 
