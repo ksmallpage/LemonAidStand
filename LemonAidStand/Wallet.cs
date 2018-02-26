@@ -9,24 +9,36 @@ namespace LemonAidStand
     class Wallet
     {
         // member variables ( HAS A )
-        double cash;
+        public double cash = 20.0;
 
 
         // Contstructor ( SPAWNER )
         public Wallet()
         {
-           // double cash = 20;
+
         }
 
         // Methods ( CAN DO )
 
-        public void DebitWallet(double grocerybill)
+        public double DebitWalletForLemonsPurchased(string lemonspurchased, List<double> lemonprice)
         {
 
-            cash = cash - grocerybill;
+            if (lemonspurchased == "100")
+            {
+                cash = cash - lemonprice.ElementAt(1);
+            }
+            else if (lemonspurchased == "30")
+            {
+                cash = cash - lemonprice.ElementAt(3);
+            }
+            else if(lemonspurchased == "75")
+            {
+                cash = cash - lemonprice.ElementAt(5);
+            }
+            return cash;
+
 
         }
-
 
     }
 }

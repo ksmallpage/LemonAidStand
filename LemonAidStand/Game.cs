@@ -55,8 +55,20 @@ namespace LemonAidStand
             ui.DisplayWeather(tomorrowsWeather, "Tomorrow");
             int todaysTemperature = day.weather.SetTemperature(CreateRandomNumber(6));
             ui.DisplayTemperature(todaysTemperature);
-            List<double> buycups = store.price.cupprice;
-            ui.UserInputForGroceryList(buycups, "Paper Cups");
+            //List<double> buycups = store.price.cupprice;
+            string numberOfPaperCups = ui.UserInputForGroceryList(store.price.cupprice, "Paper Cups");
+           // List<double> buylemons = store.price.lemonprice;
+            string numberOfLemons = ui.UserInputForGroceryList(store.price.lemonprice, "Lemons");
+            string numberOfCupsOfSugar = ui.UserInputForGroceryList(store.price.sugarprice, "Cups of Sugar");
+            string numberOfIceCubes = ui.UserInputForGroceryList(store.price.icecubeprice, "Ice Cubes");
+
+            Console.WriteLine(numberOfPaperCups);
+            Console.WriteLine(numberOfLemons);
+            Console.WriteLine(numberOfCupsOfSugar);
+            Console.WriteLine(numberOfIceCubes);
+            ui.DisplayCurrentCash(player.money.cash);
+
+
 
 
 

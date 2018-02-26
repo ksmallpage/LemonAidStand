@@ -50,15 +50,20 @@ namespace LemonAidStand
 
         }
 
-        public void UserInputForGroceryList(List<double> pricelist, string item)
+        public string UserInputForGroceryList(List<double> pricelist, string item)
         {
+            string numberOfItem;
             Console.WriteLine("You can Buy:");
-            Console.WriteLine($"{pricelist.ElementAt(0)} {item} for {pricelist.ElementAt(1)}");
-            Console.WriteLine($"{pricelist.ElementAt(2)} {item} for {pricelist.ElementAt(3)}");
-            Console.WriteLine($"{pricelist.ElementAt(4)} {item} for {pricelist.ElementAt(5)}");
+            Console.WriteLine($"{pricelist.ElementAt(0)} {item} for $ {pricelist.ElementAt(1)}");
+            Console.WriteLine($"{pricelist.ElementAt(2)} {item} for $ {pricelist.ElementAt(3)}");
+            Console.WriteLine($"{pricelist.ElementAt(4)} {item} for $ {pricelist.ElementAt(5)}");
             Console.WriteLine($"How may {item} to you want to Buy ");
-            Console.Read();
+            return numberOfItem = Console.ReadLine();
         
+        }
+        public void DisplayCurrentCash(double cash)
+        {
+            Console.WriteLine($"Your current cash is {cash}");
         }
     }
 }
