@@ -55,6 +55,8 @@ namespace LemonAidStand
             ui.DisplayWeather(tomorrowsWeather, "Tomorrow");
             int todaysTemperature = day.weather.SetTemperature(CreateRandomNumber(6));
             ui.DisplayTemperature(todaysTemperature);
+            List<double> buycups = store.price.cupprice;
+            ui.UserInputForGroceryList(buycups, "Paper Cups");
 
 
 

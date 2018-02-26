@@ -9,16 +9,23 @@ namespace LemonAidStand
     class Wallet
     {
         // member variables ( HAS A )
+        double cash;
 
-        // TodaysWeather
 
         // Contstructor ( SPAWNER )
         public Wallet()
         {
-
+           // double cash = 20;
         }
 
         // Methods ( CAN DO )
+
+        public void DebitWallet(double grocerybill)
+        {
+
+            cash = cash - grocerybill;
+
+        }
 
 
     }
