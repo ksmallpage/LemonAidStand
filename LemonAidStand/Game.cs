@@ -53,6 +53,8 @@ namespace LemonAidStand
             ui.DisplayWeather(todaysWeather, "Today");
             string tomorrowsWeather = day.weather.CreateWeather(CreateRandomNumber(6));
             ui.DisplayWeather(tomorrowsWeather, "Tomorrow");
+            int todaysTemperature = day.weather.SetTemperature(CreateRandomNumber(6));
+            ui.DisplayTemperature(todaysTemperature);
 
 
 
@@ -66,7 +68,8 @@ namespace LemonAidStand
             // int sugar 0
             // int cups 0
 
-            // set up the price structure
+            // set up the price 
+
 
         }
 
