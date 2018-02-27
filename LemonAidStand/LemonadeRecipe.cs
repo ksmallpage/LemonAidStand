@@ -9,6 +9,9 @@ namespace LemonAidStand
     class LemonadeRecipe
     {
         // member variables ( HAS A )
+        List<int> standardLemonAdeRecipe = new List<int>();
+        List<int> sweetLemonadeRecipe = new List<int>();
+        List<int> coldLemonadeRecipe = new List<int>();
 
         // TodaysWeather
 

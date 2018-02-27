@@ -16,6 +16,10 @@ namespace LemonAidStand
         public Store store = new Store();
         private Random rnd = new Random();
         public int randomNumber;
+        double cashforcups;
+        double cashforlemons;
+        double cashforsugar;
+        double cashforice;
 
 
 
@@ -38,56 +42,103 @@ namespace LemonAidStand
 
 
 
-       public void RunGame()
+        public void RunGame()
         {
 
-            // set up the game
-                // substances a player --> player substances the inventory
-                //substances 
 
-
-            //set up the game
             ui.Instructions();
-            ui.DisplayPlayerInventory();
+            List<int> inventory = player.inventory.itemamounts;
+            ui.DisplayCurrentInventory(inventory);
             string todaysWeather = day.weather.CreateWeather(CreateRandomNumber(6));
             ui.DisplayWeather(todaysWeather, "Today");
             string tomorrowsWeather = day.weather.CreateWeather(CreateRandomNumber(6));
             ui.DisplayWeather(tomorrowsWeather, "Tomorrow");
             int todaysTemperature = day.weather.SetTemperature(CreateRandomNumber(6));
             ui.DisplayTemperature(todaysTemperature);
-            //List<double> buycups = store.price.cupprice;
+            int customersGeneratedByWeather = day.customer.HowManyCustomersByWeather(todaysWeather, day.weather.potentialCustomerByWeather);
+            int customersGeneratedByTemperature = day.customer.HowManyCustomersByTemperature(todaysTemperature, day.weather.potentialCustomersByTemperature);
+            int howManyPotentialDailyCustomers = day.customer.HowManyPotentialDailyCustomers(customersGeneratedByWeather, customersGeneratedByTemperature);
+            day.customer.CreateDailyCustomerList();
+
+            Lemons();
+            Sugar();
+            Ice();
+            Cups();
+            ui.DisplayCurrentInventory(inventory);
+            ui.DisplayCurrentCash(player.wallet.cash);
+        }
+
+        private void Cups()
+        {
             string numberOfPaperCups = ui.UserInputForGroceryList(store.price.cupprice, "Paper Cups");
-           // List<double> buylemons = store.price.lemonprice;
-            string numberOfLemons = ui.UserInputForGroceryList(store.price.lemonprice, "Lemons");
-            string numberOfCupsOfSugar = ui.UserInputForGroceryList(store.price.sugarprice, "Cups of Sugar");
-            string numberOfIceCubes = ui.UserInputForGroceryList(store.price.icecubeprice, "Ice Cubes");
-
-            Console.WriteLine(numberOfPaperCups);
-            Console.WriteLine(numberOfLemons);
-            Console.WriteLine(numberOfCupsOfSugar);
-            Console.WriteLine(numberOfIceCubes);
-            ui.DisplayCurrentCash(player.money.cash);
-
-
-
-
-
-            // Player to buy Inventory from store
-
-
-            // set up the initial game
-            // double Money $10
-            // int ICE 0
-            // int Lemons 0
-            // int sugar 0
-            // int cups 0
-
-            // set up the price 
-
+            bool canBuyCups = player.wallet.CanBuyCups(numberOfPaperCups, store.price.cupprice);
+            if (canBuyCups == true)
+            {
+                player.inventory.UpdateInventory(numberOfPaperCups, "Paper Cups");
+                cashforcups = player.wallet.DebitWalletForCupsPurchased(numberOfPaperCups, store.price.cupprice);
+                ui.DisplayCurrentCash(cashforcups);
+            }
+            else
+            {
+                ui.DisplayCannotBuy();
+                ui.DisplayCurrentCash(player.wallet.cash);
+            }
 
         }
 
+        public void Lemons()
+        {
+            string numberOfLemons = ui.UserInputForGroceryList(store.price.lemonprice, "Lemons");
+            bool canyoubuyLemons = player.wallet.CanYouBuyLemons(numberOfLemons, store.price.lemonprice);
+            if (canyoubuyLemons == true)
+            {
+                player.inventory.UpdateInventory(numberOfLemons, "Lemons");
+                cashforlemons = player.wallet.DebitWalletForLemonsPurchased(numberOfLemons, store.price.lemonprice);
+                ui.DisplayCurrentCash(cashforlemons);
+            }
+            else
+            {
+                ui.DisplayCannotBuy();
+                ui.DisplayCurrentCash(player.wallet.cash);
+            }
+        }
 
+        public void Sugar()
+        {
+            string numberOfCupsOfSugar = ui.UserInputForGroceryList(store.price.sugarprice, "Cups of Sugar");
+            bool canYouBuySugar = player.wallet.CanYouBuySugar(numberOfCupsOfSugar, store.price.sugarprice);
+            if (canYouBuySugar == true)
+            {
+                player.inventory.UpdateInventory(numberOfCupsOfSugar, "Cups of Sugar");
+                cashforsugar = player.wallet.DebitWalletForSugarPurchased(numberOfCupsOfSugar, store.price.sugarprice);
+                ui.DisplayCurrentCash(cashforsugar);
+            }
+            else
+            {
+                ui.DisplayCannotBuy();
+                ui.DisplayCurrentCash(player.wallet.cash);
+            }
 
+        }
+
+        public void Ice()
+        {
+            string numberOfIceCubes = ui.UserInputForGroceryList(store.price.icecubeprice, "Ice Cubes");
+            bool canYouBuyIceCubes = player.wallet.CanYouBuyIceCubes(numberOfIceCubes, store.price.icecubeprice);
+            if (canYouBuyIceCubes == true)
+            {
+                player.inventory.UpdateInventory(numberOfIceCubes, "Ice Cubs");
+                cashforice = player.wallet.DebitWalletForIcePurchased(numberOfIceCubes, store.price.icecubeprice);
+                ui.DisplayCurrentCash(cashforice);
+            }
+            else
+            {
+                ui.DisplayCannotBuy();
+                ui.DisplayCurrentCash(player.wallet.cash);
+            }
+
+        }
+
+        }
     }
-}
+

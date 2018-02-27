@@ -10,7 +10,7 @@ namespace LemonAidStand
     {
         // member variables ( HAS A )
         public Inventory inventory = new Inventory();
-        public Wallet money = new Wallet();
+        public Wallet wallet = new Wallet();
         public ShoppingList shoppinglist = new ShoppingList();
         public Stand stand = new Stand();
 

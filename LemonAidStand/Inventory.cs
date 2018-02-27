@@ -10,7 +10,9 @@ namespace LemonAidStand
     {
         // member variables ( HAS A )
         private List<string> items = new List<string>();
-        private List<int> itemamounts = new List<int>();
+        public List<int> itemamounts = new List<int>();
+        int purchaseditems;
+       
 
 
         // constructor
@@ -26,8 +28,25 @@ namespace LemonAidStand
 
             // Methods ( CAN DO )
 
-            public void HowMuchInventory()
+            public void UpdateInventory(string numberofitemspurchased, string item)
+           {
+            purchaseditems = int.Parse(numberofitemspurchased);
+            if (item == "Lemons")
             {
+                itemamounts[0] = purchaseditems;
+            }
+            else if(item == "Cups of Sugar")
+            {
+                itemamounts[1] = purchaseditems;
+            }
+            else if(item == "Ice Cubs")
+            {
+                itemamounts[2] = purchaseditems;
+            }
+            else if(item == "Paper Cups")
+            {
+                itemamounts[3] = purchaseditems;
+            }
 
             }
 

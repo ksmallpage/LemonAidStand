@@ -20,10 +20,7 @@ namespace LemonAidStand
         }
 
         // Methods ( CAN DO )
-        public void DisplayPlayerInventory()
-        {
-            // needs player.inventory list     
-        }
+     
 
         public void Instructions()
         {
@@ -45,9 +42,14 @@ namespace LemonAidStand
             Console.WriteLine($"The temperature today is {temperature} degrees.");
         }
 
-        public void DisplayCurrentInventory()
+        public void DisplayCurrentInventory(List<int> inventory)
         {
-
+            Console.WriteLine("Your current Inventory:");
+            Console.WriteLine($"You have {inventory.ElementAt(0)} Lemons");
+            Console.WriteLine($"You have {inventory.ElementAt(1)} Cups of Sugar");
+            Console.WriteLine($"You have {inventory.ElementAt(2)} Ice Cubs");
+            Console.WriteLine($"You have {inventory.ElementAt(3)} Paper Cups");
+            
         }
 
         public string UserInputForGroceryList(List<double> pricelist, string item)
@@ -57,10 +59,16 @@ namespace LemonAidStand
             Console.WriteLine($"{pricelist.ElementAt(0)} {item} for $ {pricelist.ElementAt(1)}");
             Console.WriteLine($"{pricelist.ElementAt(2)} {item} for $ {pricelist.ElementAt(3)}");
             Console.WriteLine($"{pricelist.ElementAt(4)} {item} for $ {pricelist.ElementAt(5)}");
-            Console.WriteLine($"How may {item} to you want to Buy ");
+            Console.WriteLine($"How many {item} to you want to Buy ");
             return numberOfItem = Console.ReadLine();
         
         }
+
+        internal void DisplayCannotBuy()
+        {
+            Console.WriteLine("You do not have enough money for the item you want to buy");
+        }
+
         public void DisplayCurrentCash(double cash)
         {
             Console.WriteLine($"Your current cash is {cash}");

@@ -12,6 +12,8 @@ namespace LemonAidStand
 
         private List<string> weathertypes = new List<string>();
         private List<int> temperature = new List<int>();
+        public List<int> potentialCustomerByWeather = new List<int>();
+        public List<int> potentialCustomersByTemperature = new List<int>();
 
 
         // constructor
@@ -20,6 +22,9 @@ namespace LemonAidStand
            
             weathertypes = new  List<string>() { "Overcast", "Cloudy", "Rainy", "Sunny", "Clear", "Muggy" };
             temperature = new List<int>() { 55, 65, 75, 85, 90, 95 };
+            potentialCustomerByWeather = new List<int>() { 20, 10, -20, 30, 30, 40 };
+            potentialCustomersByTemperature = new List<int>() { 20, 40, 60, 70, 80, 100 };
+
         }
 
         // methods
