@@ -13,6 +13,9 @@ namespace LemonAidStand
         int customersGeneratedByTemperature;
         int dailyPotentialCustomers;
         List<int> dailyCustomers = new List<int>();
+        private Random rnd = new Random();
+        int dailyCustomersBuying;
+        int dailyCustomersNotBuying;
 
         // constructor
         public Customer()
@@ -92,6 +95,23 @@ namespace LemonAidStand
             {
                 dailyCustomers.Add(i);
             }
+        }
+        public int CreateHowManyDailyCustomersWillBuy()
+        {
+            foreach(int customer in dailyCustomers)
+            {
+                int randomNumber = rnd.Next(1, 3);
+                if (randomNumber == 1)
+                {
+                    dailyCustomersBuying++;
+                }
+                else
+                {
+                    dailyCustomersNotBuying++;
+                }
+
+            }
+            return dailyCustomersBuying;
         }
 
     }

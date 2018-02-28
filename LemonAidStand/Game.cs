@@ -60,8 +60,20 @@ namespace LemonAidStand
             List<int> pitcherList = player.stand.pitcher.CreatePitcher(pitcherChoice);
             string pricePerCup = ui.GetPriceOfCupFromPlayer();
             string icePerCup = ui.GetIceCubesPerCupFromPlayer();
+            int buyingCustomers = day.customer.CreateHowManyDailyCustomersWillBuy();
+            Console.WriteLine(buyingCustomers);
+
+            // calculate what iventory is needed 
+
+            int iceInCup = int.Parse(icePerCup);
+            int howMuchIce = buyingCustomers * iceInCup;
+            Console.WriteLine(howMuchIce);
+
+
+
+           // Console.WriteLine(buyingCustomers);
+
             // debit lemons and Sugar
-            // create will customerbuy
             //if customer buys 
             //debit ice and cups
         }
@@ -84,7 +96,7 @@ namespace LemonAidStand
 
         }
 
-        public void Lemons()
+        private void Lemons()
         {
             string numberOfLemons = ui.UserInputForGroceryList(store.price.lemonprice, "Lemons");
             bool canyoubuyLemons = player.wallet.CanYouBuyLemons(numberOfLemons, store.price.lemonprice);
@@ -101,7 +113,7 @@ namespace LemonAidStand
             }
         }
 
-        public void Sugar()
+        private void Sugar()
         {
             string numberOfCupsOfSugar = ui.UserInputForGroceryList(store.price.sugarprice, "Cups of Sugar");
             bool canYouBuySugar = player.wallet.CanYouBuySugar(numberOfCupsOfSugar, store.price.sugarprice);
@@ -119,7 +131,7 @@ namespace LemonAidStand
 
         }
 
-        public void Ice()
+        private void Ice()
         {
             string numberOfIceCubes = ui.UserInputForGroceryList(store.price.icecubeprice, "Ice Cubes");
             bool canYouBuyIceCubes = player.wallet.CanYouBuyIceCubes(numberOfIceCubes, store.price.icecubeprice);
@@ -137,7 +149,7 @@ namespace LemonAidStand
 
         }
 
-        public void GameSetup()
+        private void GameSetup()
         {
 
             string todaysWeather = day.weather.CreateWeather(CreateRandomNumber(6));
