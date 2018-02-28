@@ -50,6 +50,33 @@ namespace LemonAidStand
 
             }
 
+        internal void DebitInventory()
+        {
+            throw new NotImplementedException();
         }
+
+        public int CalculateHowManyCupsSold(int buyingCustomers, string icePerCup)
+        {
+            int iceInCups = int.Parse(icePerCup);
+            int numberOfCubesNeeded = buyingCustomers * iceInCups;
+
+            if (itemamounts.ElementAt(2) >= numberOfCubesNeeded && itemamounts.ElementAt(3) >= buyingCustomers)
+            {
+                return buyingCustomers;
+            }
+            else
+            {
+                if ((itemamounts.ElementAt(2) / iceInCups) < itemamounts.ElementAt(3)){
+                    return buyingCustomers = (itemamounts.ElementAt(2) / iceInCups);
+                }
+                else
+                {
+                    return buyingCustomers = itemamounts.ElementAt(3);
+                }
+                
+            }
+        }   
+
+    }
     }
 

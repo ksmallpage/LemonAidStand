@@ -10,7 +10,7 @@ namespace LemonAidStand
     {
         // member variables ( HAS A )
         public Goods goods = new Goods();
-        public Checkout checkout = new Checkout();
+       // public Checkout checkout = new Checkout();
         public Price price = new Price();
 
         // TodaysWeather

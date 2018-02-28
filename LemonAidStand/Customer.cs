@@ -15,7 +15,7 @@ namespace LemonAidStand
         List<int> dailyCustomers = new List<int>();
         private Random rnd = new Random();
         int dailyCustomersBuying;
-        int dailyCustomersNotBuying;
+
 
         // constructor
         public Customer()
@@ -83,6 +83,11 @@ namespace LemonAidStand
 
         }
 
+        public int CalculateCustomersServed(int buyingCustomers, int howManyPitchers)
+        {
+           int customersServed = 
+        }
+
         public int HowManyPotentialDailyCustomers(int customersGeneratedByWeather, int customersGeneratedByTemperature)
         {
             dailyPotentialCustomers = customersGeneratedByTemperature + customersGeneratedByWeather;
@@ -107,7 +112,7 @@ namespace LemonAidStand
                 }
                 else
                 {
-                    dailyCustomersNotBuying++;
+                   
                 }
 
             }

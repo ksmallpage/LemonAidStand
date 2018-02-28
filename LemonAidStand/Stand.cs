@@ -12,7 +12,7 @@ namespace LemonAidStand
 
         private Recipe recipe = new Recipe();
         public Pitcher pitcher = new Pitcher();
-        public CupPrice cupprice = new CupPrice();
+       // public CupPrice cupprice = new CupPrice();
 
 
 

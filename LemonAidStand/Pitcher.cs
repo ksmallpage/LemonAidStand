@@ -9,14 +9,14 @@ namespace LemonAidStand
     class Pitcher
     {
         // member variables ( HAS A )
-        List<int> standardPitcher = new List<int>();
+        public List<int> standardPitcher = new List<int>() { 4, 4, 8 }; // lemons , Cups of Sugars , Cups per Pitcher
 
-        // TodaysWeather
+     
 
         // Contstructor ( SPAWNER )
         public Pitcher()
         {
-            List<int> standardPitcher = new List<int>() { 4, 4, 8 }; // lemons , Cups of Sugars , Cups per Pitcher
+           
         }
 
         // Methods ( CAN DO )
@@ -31,6 +31,29 @@ namespace LemonAidStand
             {
                 return null;
             }
+        }
+
+        public int CalculateHowManyPitchers(List<int> pitcherRecipe, List<int> currentInventory) // lemons, sugar
+        {
+            int numberOfPitchers;
+            int numberOfLemons = currentInventory.ElementAt(0);
+            int cupsOfSugar = currentInventory.ElementAt(1);
+            int numberOfPitchersLemonsCanMake = numberOfLemons / pitcherRecipe.ElementAt(0);
+            int numberOfPitchersSugarCanMake = cupsOfSugar / pitcherRecipe.ElementAt(1);
+
+            if(numberOfPitchersLemonsCanMake < numberOfPitchersSugarCanMake)
+            {
+                return numberOfPitchers = numberOfPitchersLemonsCanMake;
+            }
+            else
+            {
+                return numberOfPitchers = numberOfPitchersSugarCanMake;
+            }
+            
+
+
+
+
         }
     }
 }

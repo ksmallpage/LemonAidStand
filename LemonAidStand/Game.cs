@@ -61,21 +61,18 @@ namespace LemonAidStand
             string pricePerCup = ui.GetPriceOfCupFromPlayer();
             string icePerCup = ui.GetIceCubesPerCupFromPlayer();
             int buyingCustomers = day.customer.CreateHowManyDailyCustomersWillBuy();
-            Console.WriteLine(buyingCustomers);
+            int howManyPitchers = player.stand.pitcher.CalculateHowManyPitchers(pitcherList, inventory);
+            int howManyCupsCanBeSold = player.inventory.CalculateHowManyCupsSold(buyingCustomers, icePerCup);
+            // player.inventory.DebitInventory(); pitcherList howmanypitchers
 
-            // calculate what iventory is needed 
-
-            int iceInCup = int.Parse(icePerCup);
-            int howMuchIce = buyingCustomers * iceInCup;
-            Console.WriteLine(howMuchIce);
+             int calculateHowManyCustomerGetLemonade = day.customer.CalculateCustomersServed(buyingCustomers, howManyPitchers, icePerCup, pitcherList);
 
 
+            // tells user outcome update in inventory based on pitchers sold
 
-           // Console.WriteLine(buyingCustomers);
 
-            // debit lemons and Sugar
-            //if customer buys 
-            //debit ice and cups
+
+
         }
 
         private void Cups()
