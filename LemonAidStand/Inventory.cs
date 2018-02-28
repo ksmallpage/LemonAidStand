@@ -28,7 +28,7 @@ namespace LemonAidStand
 
             // Methods ( CAN DO )
 
-            public void UpdateInventory(string numberofitemspurchased, string item)
+            public void UpdateInventory(string numberofitemspurchased, string item) // this should be create inventory
            {
             purchaseditems = int.Parse(numberofitemspurchased);
             if (item == "Lemons")

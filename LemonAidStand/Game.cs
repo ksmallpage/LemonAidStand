@@ -49,23 +49,21 @@ namespace LemonAidStand
             ui.Instructions();
             List<int> inventory = player.inventory.itemamounts;
             ui.DisplayCurrentInventory(inventory);
-            string todaysWeather = day.weather.CreateWeather(CreateRandomNumber(6));
-            ui.DisplayWeather(todaysWeather, "Today");
-            string tomorrowsWeather = day.weather.CreateWeather(CreateRandomNumber(6));
-            ui.DisplayWeather(tomorrowsWeather, "Tomorrow");
-            int todaysTemperature = day.weather.SetTemperature(CreateRandomNumber(6));
-            ui.DisplayTemperature(todaysTemperature);
-            int customersGeneratedByWeather = day.customer.HowManyCustomersByWeather(todaysWeather, day.weather.potentialCustomerByWeather);
-            int customersGeneratedByTemperature = day.customer.HowManyCustomersByTemperature(todaysTemperature, day.weather.potentialCustomersByTemperature);
-            int howManyPotentialDailyCustomers = day.customer.HowManyPotentialDailyCustomers(customersGeneratedByWeather, customersGeneratedByTemperature);
-            day.customer.CreateDailyCustomerList();
-
+            GameSetup();
             Lemons();
             Sugar();
             Ice();
             Cups();
             ui.DisplayCurrentInventory(inventory);
             ui.DisplayCurrentCash(player.wallet.cash);
+            string pitcherChoice = ui.GetTypeOfPitcherFromPlayer();
+            List<int> pitcherList = player.stand.pitcher.CreatePitcher(pitcherChoice);
+            string pricePerCup = ui.GetPriceOfCupFromPlayer();
+            string icePerCup = ui.GetIceCubesPerCupFromPlayer();
+            // debit lemons and Sugar
+            // create will customerbuy
+            //if customer buys 
+            //debit ice and cups
         }
 
         private void Cups()
@@ -137,6 +135,21 @@ namespace LemonAidStand
                 ui.DisplayCurrentCash(player.wallet.cash);
             }
 
+        }
+
+        public void GameSetup()
+        {
+
+            string todaysWeather = day.weather.CreateWeather(CreateRandomNumber(6));
+            ui.DisplayWeather(todaysWeather, "Today");
+            string tomorrowsWeather = day.weather.CreateWeather(CreateRandomNumber(6));
+            ui.DisplayWeather(tomorrowsWeather, "Tomorrow");
+            int todaysTemperature = day.weather.SetTemperature(CreateRandomNumber(6));
+            ui.DisplayTemperature(todaysTemperature);
+            int customersGeneratedByWeather = day.customer.HowManyCustomersByWeather(todaysWeather, day.weather.potentialCustomerByWeather);
+            int customersGeneratedByTemperature = day.customer.HowManyCustomersByTemperature(todaysTemperature, day.weather.potentialCustomersByTemperature);
+            int howManyPotentialDailyCustomers = day.customer.HowManyPotentialDailyCustomers(customersGeneratedByWeather, customersGeneratedByTemperature);
+            day.customer.CreateDailyCustomerList();
         }
 
         }

@@ -42,6 +42,29 @@ namespace LemonAidStand
             Console.WriteLine($"The temperature today is {temperature} degrees.");
         }
 
+        public string GetTypeOfPitcherFromPlayer()
+        {
+            string pitcherType;
+            Console.WriteLine("What type of Pitcher will you make?");
+            Console.WriteLine("'Standard' : 4 Lemons & 4 Cups of Sugar per Pitcher");
+            return pitcherType = Console.ReadLine();
+
+        }
+
+        internal string GetIceCubesPerCupFromPlayer()
+        {
+            string iceCubesPerCup;
+            Console.WriteLine("How many ice cubes are in each cup?");
+            return iceCubesPerCup = Console.ReadLine();
+        }
+
+        public string GetPriceOfCupFromPlayer()
+        {
+            string pricePerCup;
+            Console.WriteLine("What price in cents is each cup?");
+            return pricePerCup = Console.ReadLine();
+        }
+
         public void DisplayCurrentInventory(List<int> inventory)
         {
             Console.WriteLine("Your current Inventory:");
