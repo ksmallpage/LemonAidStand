@@ -83,10 +83,12 @@ namespace LemonAidStand
 
         }
 
-        public int CalculateCustomersServed(int buyingCustomers, int howManyPitchers)
+        internal int CalculateCustomersServed(int buyingCustomers, int howManyPitchers, string icePerCup, List<int> pitcherList)
         {
-           int customersServed = 
+            throw new NotImplementedException();
         }
+
+
 
         public int HowManyPotentialDailyCustomers(int customersGeneratedByWeather, int customersGeneratedByTemperature)
         {

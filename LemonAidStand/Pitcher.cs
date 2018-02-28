@@ -55,5 +55,11 @@ namespace LemonAidStand
 
 
         }
+
+        internal int CalculatePitchersToMake(int howManyCupsCanBeSold, List<int> pitcherRecipe)
+        {
+            int pitchersMade = howManyCupsCanBeSold / pitcherRecipe.ElementAt(2);
+            return pitchersMade;
+        }
     }
 }
