@@ -10,7 +10,6 @@ namespace LemonAidStand
     {
         // member variables ( HAS A )
 
-        private Recipe recipe = new Recipe();
         public Pitcher pitcher = new Pitcher();
        // public CupPrice cupprice = new CupPrice();
 

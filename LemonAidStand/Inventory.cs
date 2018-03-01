@@ -28,7 +28,7 @@ namespace LemonAidStand
 
             // Methods ( CAN DO )
 
-            public void UpdateInventory(string numberofitemspurchased, string item) // this should be create inventory
+            public void UpdateInventory(string numberofitemspurchased, string item) 
            {
             purchaseditems = int.Parse(numberofitemspurchased);
             if (item == "Lemons")
@@ -52,7 +52,7 @@ namespace LemonAidStand
 
         internal void DebitInventory()
         {
-            throw new NotImplementedException();
+          
         }
 
         public int CalculateHowManyCupsSold(int buyingCustomers, string icePerCup)

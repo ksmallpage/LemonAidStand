@@ -84,7 +84,7 @@ namespace LemonAidStand
             if (canBuyCups == true)
             {
                 player.inventory.UpdateInventory(numberOfPaperCups, "Paper Cups");
-                cashforcups = player.wallet.DebitWalletForCupsPurchased(numberOfPaperCups, store.price.cupprice);
+                cashforcups = player.wallet.DebitWalletForCupsPurchased(player.wallet.cash, numberOfPaperCups, store.price.cupprice);
                 ui.DisplayCurrentCash(cashforcups);
             }
             else
@@ -102,7 +102,7 @@ namespace LemonAidStand
             if (canyoubuyLemons == true)
             {
                 player.inventory.UpdateInventory(numberOfLemons, "Lemons");
-                cashforlemons = player.wallet.DebitWalletForLemonsPurchased(numberOfLemons, store.price.lemonprice);
+                cashforlemons = player.wallet.DebitWalletForLemonsPurchased(player.wallet.cash, numberOfLemons, store.price.lemonprice);
                 ui.DisplayCurrentCash(cashforlemons);
             }
             else
@@ -119,7 +119,7 @@ namespace LemonAidStand
             if (canYouBuySugar == true)
             {
                 player.inventory.UpdateInventory(numberOfCupsOfSugar, "Cups of Sugar");
-                cashforsugar = player.wallet.DebitWalletForSugarPurchased(numberOfCupsOfSugar, store.price.sugarprice);
+                cashforsugar = player.wallet.DebitWalletForSugarPurchased(player.wallet.cash, numberOfCupsOfSugar, store.price.sugarprice);
                 ui.DisplayCurrentCash(cashforsugar);
             }
             else
@@ -137,7 +137,7 @@ namespace LemonAidStand
             if (canYouBuyIceCubes == true)
             {
                 player.inventory.UpdateInventory(numberOfIceCubes, "Ice Cubs");
-                cashforice = player.wallet.DebitWalletForIcePurchased(numberOfIceCubes, store.price.icecubeprice);
+                cashforice = player.wallet.DebitWalletForIcePurchased(player.wallet.cash, numberOfIceCubes, store.price.icecubeprice);
                 ui.DisplayCurrentCash(cashforice);
             }
             else

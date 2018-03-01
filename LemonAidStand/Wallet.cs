@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonAidStand
 {
-    class Wallet
+    public class Wallet
     {
         // member variables ( HAS A )
         public double cash = 10.00;
@@ -21,7 +21,7 @@ namespace LemonAidStand
 
         // Methods ( CAN DO )
 
-        public double DebitWalletForLemonsPurchased(string lemonspurchased, List<double> lemonprice)
+        public double DebitWalletForLemonsPurchased(double cash, string lemonspurchased, List<double> lemonprice)
         {
 
             if (lemonspurchased == "10")
@@ -36,11 +36,11 @@ namespace LemonAidStand
             {
                 cash = cash - lemonprice.ElementAt(5);
             }
-            return cash;
+            return Math.Round(cash, 2);
 
         }
 
-        public double DebitWalletForSugarPurchased(string sugarpurchased, List<double> sugarprice)
+        public double DebitWalletForSugarPurchased(double cash,string sugarpurchased, List<double> sugarprice)
         {
 
             if (sugarpurchased == "8")
@@ -55,11 +55,11 @@ namespace LemonAidStand
             {
                 cash = cash - sugarprice.ElementAt(5);
             }
-            return cash;
+            return Math.Round(cash,2);
 
         }
 
-        public double DebitWalletForIcePurchased(string icepurchased, List<double> iceprice)
+        public double DebitWalletForIcePurchased(double cash, string icepurchased, List<double> iceprice)
         {
 
             if (icepurchased == "100")
@@ -74,12 +74,12 @@ namespace LemonAidStand
             {
                 cash = cash - iceprice.ElementAt(5);
             }
-            return cash;
+            return Math.Round(cash,2);
 
         }
 
 
-        public double DebitWalletForCupsPurchased(string cupspurchased, List<double> cupprice)
+        public double DebitWalletForCupsPurchased(double cash, string cupspurchased, List<double> cupprice)
         {
 
             if (cupspurchased == "25")
@@ -95,7 +95,7 @@ namespace LemonAidStand
             {
                 cash = cash - cupprice.ElementAt(5);
             }
-            return cash;
+            return Math.Round(cash, 2);
 
         }
 
