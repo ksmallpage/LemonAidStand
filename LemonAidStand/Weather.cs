@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonAidStand
 {
-    class Weather
+    public class Weather
     {
         // member variables
 

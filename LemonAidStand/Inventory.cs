@@ -33,19 +33,19 @@ namespace LemonAidStand
             purchaseditems = int.Parse(numberofitemspurchased);
             if (item == "Lemons")
             {
-                itemamounts[0] = purchaseditems;
+                itemamounts[0] = itemamounts[0] + purchaseditems;
             }
             else if(item == "Cups of Sugar")
             {
-                itemamounts[1] = purchaseditems;
+                itemamounts[1] = itemamounts[1] + purchaseditems;
             }
             else if(item == "Ice Cubs")
             {
-                itemamounts[2] = purchaseditems;
+                itemamounts[2] = itemamounts[2] + purchaseditems;
             }
             else if(item == "Paper Cups")
             {
-                itemamounts[3] = purchaseditems;
+                itemamounts[3] = itemamounts[3] + purchaseditems;
             }
 
             }

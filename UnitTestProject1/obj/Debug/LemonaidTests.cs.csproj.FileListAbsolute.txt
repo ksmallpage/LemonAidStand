@@ -1,0 +1,9 @@
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\bin\Debug\LemonAidStand.exe
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\bin\Debug\LemonAidStand.pdb
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\obj\Debug\LemonaidTests.cs.csprojResolveAssemblyReference.cache
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Baron\Desktop\C#Projects\LemonAidStand\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

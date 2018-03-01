@@ -64,6 +64,7 @@ namespace LemonAidStand
           //  int howManyPitchers = player.stand.pitcher.CalculateHowManyPitchers(pitcherList, inventory);
             int howManyCupsCanBeSold = player.inventory.CalculateHowManyCupsSold(buyingCustomers, icePerCup);
             int howManyPitchesToMake = player.stand.pitcher.CalculatePitchersToMake(howManyCupsCanBeSold, pitcherList);
+
            
 
             
